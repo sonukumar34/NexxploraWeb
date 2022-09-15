@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            /* background-image: linear-gradient(to right,#bfe9ff, #f8c9e9 ); */
+            /* background-image: linear-gradient(rgb(142, 247, 233); rgb(188, 180, 227)); */
+            /* min-height: 200vh; */
+            /* background: linear-gradient(180deg, #FFFFFF 0%, #DEDFFF 100%); */
+            background-color: rgb(0, 0, 0);
+        }
+
+        header {
+            /* background-image: linear-gradient(to right, #bfe9ff, #f8c9e9); */
+            background-color: #fff;
+            top: 0;
+            left: 0;
+            width: 93%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 40px;
+        }
+
+        header .logo {
+            position: relative;
+            font-weight: 700;
+            color: rgb(11, 11, 11);
+            text-decoration: none;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header ul {
+            list-style: none;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header ul li a {
+            position: relative;
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+            letter-spacing: 2px;
+            font-weight: 500px;
+
+        }
+
+        h1 {
+            text-align: center;
+            /* margin-left:180px; */
+            color: #fff;
+            font-size: 50px;
+            margin-top: 20px;
+           
+        }
+
+        /*blockquote p::before {
+    content: "\f095"; 
+    font-family: FontAwesome;
+   display: inline-block;
+   padding-right: 6px;
+   vertical-align: middle;
+  font-size: 180px;
+ }*/
+
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
+        .rahul {
+            font-size: 1.4em;
+            width: 35%;
+            margin: 50px 60px;
+            margin-top: 170px;
+            font-family: Open Sans;
+            font-style: italic;
+            color: #555555;
+            padding: 1.2em 30px 1.2em 75px;
+            border-radius: 10px;
+            border-left: 8px solid #78C0A8;
+            border-bottom: 8px solid #78C0A8;
+            line-height: 1.4;
+            position: relative;
+            background: #EDEDED;
+        }
+
+        .rahul::before {
+            font-family: Arial;
+            content: "\201C";
+            color: #78C0A8;
+            font-size: 4em;
+            position: absolute;
+            left: 10px;
+            top: -10px;
+        }
+
+        .rahul span {
+            display: block;
+            color: #333333;
+            font-style: normal;
+            font-weight: bold;
+            margin-top: 1em;
+            margin-left: 8em;
+        }
+
+        .sambhav {
+            font-size: 1.4em;
+            width: 35%;
+            margin: 50px 660px;
+            margin-top: -255px;
+            font-family: Open Sans;
+            font-style: italic;
+            color: #555555;
+            padding: 1.2em 30px 1.2em 75px;
+            border-radius: 10px;
+            border-left: 8px solid #78C0A8;
+            border-bottom: 8px solid #78C0A8;
+            line-height: 1.4;
+            position: relative;
+            background: #EDEDED;
+        }
+
+        .sambhav::before {
+            font-family: Arial;
+            content: "\201C";
+            color: #78C0A8;
+            font-size: 4em;
+            position: absolute;
+            left: 10px;
+            top: -10px;
+        }
+
+        .sambhav span {
+            display: block;
+            color: #333333;
+            font-style: normal;
+            font-weight: bold;
+            margin-top: 1em;
+            margin-left: 3em;
+        }
+
+        .blog-section {
+            width: 100%;
+        }
+
+        .blog-section .section-content {
+            width: 85%;
+            margin: 20px auto;
+        }
+
+        .blog-section .section-content .title {
+            width: 60%;
+            text-align: center;
+            margin: auto;
+        }
+
+        .blog-section .section-content .title h2 {
+            font-size: 40px;
+            text-decoration: underline;
+            color: #78C0A8;
+            text-transform: uppercase;
+        }
+
+        .blog-section .section-content .title p {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 20px;
+
+        }
+
+        .blog-section .section-content .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 50px;
+            margin: 25px auto;
+            /* height: 500px;
+            overflow: hidden; */
+        }
+
+        .blog-section .section-content .cards .card {
+            width: 100%;
+            background: linear-gradient(180deg, #FFFFFF 0%, #DEDFFF 100%);
+             /* box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3); */
+    border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+            position: relative
+        }
+
+        .blog-section .section-content .cards .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-section .section-content .cards .card .article {
+            padding: 15px 20px;
+        }
+
+        .blog-section .section-content .cards .card .article h4 {
+            font-size: 24px;
+            color: #6b5be4;
+            text-decoration: underline;
+        }
+
+        .blog-section .section-content .cards .card .article h6 {
+            font-size: 18px;
+            color: #6b5be4;
+            text-decoration: underline;
+        }
+
+        .blog-section .section-content .cards .card .article p {
+            font-size: 16px;
+            margin: 10px 0px;
+            color: #c84689;
+        }
+
+        .blog-section .section-content .cards .card a {
+            text-decoration: none;
+            display: inline-block;
+            background-color: rgb(228, 155, 60);
+            padding: 8px 15px;
+            margin-left: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .blog-section .section-content .cards .card .buttons{
+            text-decoration: none;
+            display: inline-block;
+            background-color: rgb(91, 27, 209);
+            padding: 8px 15px;
+            margin-left: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .blog-section .section-content .cards .card .posted-date p {
+            font-weight: 600;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            background-color: rgb(158, 127, 213);
+            padding: 6px 15px;
+
+        }
+        .blog-section.showcontent p{
+            height: auto;
+        }
+        .blog-section.showconten a.buttons{
+            background-color: ;
+        }
+
+        @media screen and (max-width:992px) {
+
+            .blog-section .section-content .cards {
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+        }
+        @media screen and (max-width:768px) {
+            .blog-section .section-content .cards {
+                grid-template-columns: 1fr;
+
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">NEXXPLORA 2K22</a>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="events.html">EVENTS</a></li>
+            <li><a href="#">FACULTY SUPPORTS</a></li>
+            <li><a href="#">WINNERS LIST</a></li>
+        </ul>
+    </header>
+
+    <div class="container">
+        <h1 class="first">NEXXPLORA <span style="text-decoration: none;">2K22</span></h1>
+        <img style="height: 420px;width:22em;margin-left: 90PX;margin-top: 30px; background-size: contain;"
+            src="NEXXPLORA 2K22.png">
+        <p
+            style="margin-left:520px;margin-top: -400px;padding:  20px;font-size: 15px;font-weight: 500;font-style: italic;background-image: linear-gradient(rgb(224, 176, 176),rgb(242, 242, 193));line-height: 1.4;">
+            <b>Nexplora is an Engineer's day event organized by department of CSE/IT. <br>
+            It is celebrated to commemorate the great achievements of Sir Mokshagundam Visvesvaraya on his birth anniversary. <br>
+            It is also celebrated to encourage and appreciate the innovative contributions of all the engineers in the country.</b></p>
+
+        <p
+            style="margin-left:520px;margin-top: 36px;padding:  20px;font-size: 15px;font-weight: 500;font-style: italic;background-color:skyblue;line-height: 1.4;">
+            <b>"We warmly WELCOME you all in the Nexplora 2k22 on the behalf of entire CSE/IT department and we appreciate your participation & Interest in Nexplora 2k22."</b></p>
+    </div>
+
+
+    <!-- <blockquote class="blockquote">
+    </blockquote>
+    <br /> -->
+    <blockquote class="rahul">
+        Dear Students; Participation is the key to success so do participation and be the face of your field|
+        All The Best!
+        <span>Rahul Gupta(Head IT)</span>
+    </blockquote>
+
+    <blockquote class="sambhav">
+       Every Student have the ability to shine and it's never too late for anything so take your first step from here!
+       Do participate, and remember results are the fruit of practice so just give your best!
+       All The Very Best:)
+        <span>Sambhav Agarwal(Deputy Head CS)</span>
+    </blockquote>
+
+    <div>
+        <h1
+            style="font-size:40px;text-align:center;
+            color: #78C0A8;;text-decoration: underline;justify-content: space-between;">
+            EVENT ORGANISER</h1>
+        <div style="display:flex;justify-content:space-between;margin:40px;background-color: ;">
+            <p style="font-size:30px;color: #fff;"><b>Ritwik Sinha<br>(CSE 4th year)</b></p>
+            <p style="font-size:30px;color: #fffc;"><b>Prakhar Saxena<br>(CSE 4th year)</b></p>
+            <p style="font-size:30px;color: #fff"><b>Neelesh Prajapati<br>(IT 4th year)</b></p>
+        </div>
+    </div>
+
+    <!-- <div class="edetails">
+        <h1 style="font-size:40px;text-align:center;color:#333333;text-decoration: underline;">EVENT DETAILS</h1>
+    </div> -->
+
+
+    <div class="blog-section">
+        <div class="section-content blog">
+            <div class="title">
+                <h2>Event details</h2>
+                <p>"Nexxplora is the engineer's day event organise every year by CSE/IT department and there are many other events which are sponsored by NEXXPLORA so here is the list of the events which are going to held on engineer's day and every event have it's own importance some events are very useful for personality building, some are very useful for career point of view and some for fun purposes as well. So here is the list below:"</p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="image-section">
+                        <img src="web.png">
+                    </div>
+                    <div class="article">
+                        <h4>Web challenges</h4>
+                        <p>"In this event participants have the guidelines of how to make webpage and how the webpage looks like.The format of presenting guidelines is pdf and in that pdf the link of images,buttons,whatever is required is mentioned already the only thing that participants need to do that implements that guidelines and make the beautiful webpage".<br><br>In the end the best page designer is awarded bry the Chairman sir</p>
+                        <h6>Event Incharge</h6>
+                        <p>1.Sonu Kumar<br>2.</p>
+                        <h6>Volunteers</h6>
+                        <p>1.Rishab Mishra(CSE 4th Year)<br>2.Shorya Chaturvedi(CSE 4th Year)<br>3.Ajeet Kumar(CSE 4th Year)<br>4.Anshu Mishra(IT 3rd Year)<br>5.Saumya (CSE 3rd Year)<br></p>
+                        <h6>Faculty </h6>
+                        <p>1.Sana Afreen<br>2.Sarika Singh</p>
+                        <h6>Winners </h6>
+                        <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:8957896305" class="button">Call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-section">
+                        <img src="tressure.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Treasure Hunt</h4>
+                        <p>"Treasure hunt is the most exciting and adventurous games where teams from all the branches compete with each other to find the treasuere on the basis of clues.The team which solve all the riddles and clues first wins the game and get awarded by CS Dept."</p>
+                        <h6>Event Incharge</h6>
+                        <p>1.Shivansh Khare<br>2.</p>
+                        <h6>Volunteers</h6>
+                        <p>1.Akash Singh (CSE 4th Year)<br>2.Abu Bakar (CSE 4th Year)<br>3.Sahil Kumar (CSE 4th Year)<br>4.Navya Yadav (CSE 4th Year)<br>5.Rajat (CSE 3rd Year)<br>6.(IT 4th Year)</p>
+                        <h6>Faculty </h6>
+                        <p>1.Archana Dwivedi<br>2.Saumya Singh</p>
+                        <h6>Winners </h6>
+                        <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:8887988958" class="button">Call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="image-section">
+                        <img src="mock interview.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Mock Interview</h4>
+                        <p>"Mock Interview is one of the best way to practice and check your communication skills.Nexxplora comes with this event to encourage or boost confidence of all the participants of te event.This event also includes multiple levels as well so the participants must need to clear all the levels to reach in the finals."<br><br>And the finalist is awarded by the chairman sir/CS/IT dept. </p>
+                        <h6>Event Incharge</h6>
+                        <p>1.Jaya Khare<br>2.</p>
+                        <h6>Volunteers</h6>
+                        <p>1.Pavitra Dwivedi (CSE 4th Year)<br>2.Monika Patel (CSE 4th Year)<br>3.Tushika (CSE 3rd Year)<br>4.(IT 4th Year)</p>
+                        <h6>Faculty </h6>
+                        <p>1.Apoorva Mishra</p>
+                        <h6>Winners </h6>
+                        <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:8887545033" class="button">Call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="coding.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Coding Challenges</h4>
+                        <p>Being a CS/IT student coding is the most important skill that every student must have and for acquiring this skill one should have to do  proper and procedural practice, Nexxplora brings this event to sharpen the coding skill of students where every participant compete with the best coders in the college and able to know their actual worth <br><br> Best coder will be awarded by Chairman Sir/CS/IT department. </p>
+                        <h6>Event Incharge</h6>
+                        <p>1.Harsh Dubey<br>2.</p>
+                        <h6>Volunteers</h6>
+                        <p>1.Alok Pal (CSE 4th Year)<br>2.Vishwadev Pratap Singh (CSE 4th Year)<br>3.Sudeep Jaiswal (CSE 4th Year)<br>4.Manoj Pandey (CSE 4th Year)<br>5.(IT 4th Year)</p>
+                        <h6>Faculty </h6>
+                        <p>1.Faizan Mahmood<br>2.Akansha Srivastava</p>
+                        <h6>Winners </h6>
+                        <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:9517229130" class="button">Call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="tech quiz.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Technical Quiz</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Ujjwal Srivastava<br>2.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Gauri Mishra (CSE 4th Year)<br>2.Kartikey Singh (CSE 4th Year)<br>3.Devarishi (CSE 3rd Year)<br>4.Om Khare (CSE 3rd Year)<br>5.(IT 4th Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Nirupama Pathak<br>2.Deepti Razdan</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:6388627596" class="button">Call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="shine.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Nexxplora Shine</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Mansi Jain<br>2.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Harsh Vardhan Singh (CSE 4th Year)<br>2.Pawan Kumar (CSE 4th Year)<br>3.Aryanshi Singh (CSE 3rd Year)<br>4.(IT 4th Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Ram Dubey<br>2.Anurag Singh</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:7499089880" class="button">call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="image-section">
+                        <img src="arm.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Arms Wrestling</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Akhilendra Mishra<br>2.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Udit Srivastava (CSE 4th Year)<br>2.Mukul singh (CSE 3rd Year)<br>3.Harshit Visht (CSE 3rd Year)<br>4.(IT 3rd Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Sambhav Aggarwal</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:6386068129" class="button">call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="BGMII.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>BGMI</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Risabh Singh<br>2.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Shivendra Srivastav (CSE 4th Year)<br>2.Alok Singh(CSE 3rd Year)<br>3.Jasmin Kaur (CSE 3rd Year)<br>4.(IT 3rd Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Anoop Mathur</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br>4.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:6393411553" class="button">call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="NFSSSS.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Need For Speed-NFS</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi molestiae aut, neque mollitia illum consequuntur asperiores autem similique fuga magni in deserunt ad esse? Tenetur earum veniam esse ipsa, explicabo excepturi suscipit nemo, atque placeat quo repellat, nisi harum sit maxime ullam. Aliquam, quod!
+                        </p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Ajay Kumar Tandon<br>2.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Sujeet Kumar Yadav (CSE 4th Year)<br>2.Shweta (CSE 3rd Year)<br>3.Shubham Shukla (CSE 3rd Year)<br>4.(IT 3rd Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Sumit Singh</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:7651893649" class="button">call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="poster making.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Poster Making</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Babita Pandey<br>2.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Mohd Nazeer (CSE 4th Year)<br>2.Mohd Arshad (CSE 4th Year)<br>3.Saloni Kumari (CSE 4th Year><br>4.Pragya singh (CSE 3rd Year)<br>5.(IT 3rd Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Sana Afreen</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:9336897896" class="button">call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="presentation.jpeg">
+                    </div>
+                    <div class="article">
+                        <h4>Project Presentation</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Bhumika Srivastava<br>2.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Kumari Anshula (CSE 4th Year)<br>2.Akhilendra Mishra (CSE 4th Year)<br>3.Navya Yadav (CSE 4th Year)<br>4.Harsh Barnwal (CSE 3rd Year)<br>5.(IT 3rd Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Saif Zaheer</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                            
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:8954535590" class="button">call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="extempore.png">
+                    </div>
+                    <div class="article">
+                        <h4>Extempore</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p> 
+                            <h6>Event Incharge</h6>
+                            <p>1.Babita Pandey<br>2.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Mansi Jain (CSE 4th Year)<br>2.Sahil Kumar (CSE 4th Year)<br>3.Shubham Singh (CSE 4th Year><br>4.Purnima singh (CSE 3rd Year)<br>5.(IT 3rd Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Arpita Srivastava</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:9170582276" class="button">Call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="aptitude.png">
+                    </div>
+                    <div class="article">
+                        <h4>Reasoning & Aptitude</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Nisha Kumari.</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Sneha Singh Pal (CSE 4th Year)<br>2.Monika Patel (CSE 4th Year)<br>3.Shivansh Khare (CSE 4th Year)<br>4.Shaswat Awasthi (CSE 3rd Year)<br>5.Prince Patel(CSE 3rd Year)<br>6.(IT 3rd year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Ashish Mishra</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:8887988958" class="button">Call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-section">
+                        <img src="placenewww.jpg">
+                    </div>
+                    <div class="article">
+                        <h4>Placed</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ut dolorem, eveniet quod
+                            nisi quo dolorum magni sequi rem mollitia asperiores ullam ipsa consequatur minima
+                            voluptatibstinctio sed laudantium corrupti commodi
+                            tempora voluptas placeat? Facilis, aliquam distinctio! Incidunt?Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Maiores ipsum repellat distinctio eius reprehenderit dolorum.
+                            Beatae quod est maiores, rem neque itaque voluptatem totam nesciunt ex assumenda, nobis
+                            dolore! Quia!</p>
+                            <h6>Event Incharge</h6>
+                            <p>1.Prakhar Saxena</p>
+                            <h6>Volunteers</h6>
+                            <p>1.Sonu Kumar (CSE 4th Year)<br>2.Govind Upadhyay (CSE 3rd Year)<br>3.(IT 3rd Year)</p>
+                            <h6>Faculty </h6>
+                            <p>1.Rahul Gupta<br>2.Sambhav Agarwal<br>3.Dushyant Srivastava<br>4.Sanjay Tandon</p>
+                            <h6>Winners </h6>
+                            <p>1.(Yet To Announce)<br>2.(Yet To Announce)<br>3.(Yet To Announce)<br><br>For Assistance:-</p>
+                    </div>
+                    <div class="blog-view">
+                        <a href="tel:8954535590" class="button">Call</a>
+                    </div>
+                    <div class="posted-date">
+                        <p>On 20th September</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1
+            style="font-size:40px;text-align:center;color: #78C0A8;;text-decoration: underline;justify-content: space-between;text-transform: uppercase;">
+            Register Yourself For Nexxplora</h1>
+            <div 
+            style=" text-decoration: none;
+             box-shadow: 5px 10px 8px #888888;
+            border-radius: 12px;
+            display: inline-block;
+            text-align: center;
+            background-color: rgb(156, 208, 245);
+            padding: 20px 50px;
+            margin-left: 470px;
+            margin-top:40px;
+            color: #fff !important;
+            margin-bottom: 20px;" class="blog-view">
+                <a style="color: rgb(201, 66, 66) !important; text-decoration: none;font-size: 28px;" href="https://docs.google.com/forms/d/e/1FAIpQLSdtfhKUUuPEqTRlON0WjMt_0I513avg_fxYHcKZvSM1-DfwKw/viewform">Click here to Register</a>
+            </div>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+     <script>
+
+        $(".buttons").on('click',function(){
+            $(this).parent().toggleClass("showcontent");
+        });
+
+     </script> -->
+
+</body>
+
+</html>
